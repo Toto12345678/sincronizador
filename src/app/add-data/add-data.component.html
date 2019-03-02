@@ -1,0 +1,49 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Nuevo Registro</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <form [formGroup]="formNewRegister">
+      <ion-item>
+        <ion-input type="text" formControlName="name" placeholder="Nombre"></ion-input>
+        <span *ngIf="formNewRegister.get('name').touched && formNewRegister.get('name').hasError('required')">Campo requerido</span>
+      </ion-item>
+    
+      <ion-item>
+        <ion-input type="number" formControlName="edad" placeholder="Edad"></ion-input>
+        <span *ngIf="formNewRegister.get('edad').touched && formNewRegister.get('edad').hasError('required')">Campo requerido</span>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Sexo</ion-label>
+        <ion-select formControlName="sexo" placeholder="Seleccione uno">
+          <ion-select-option value="m">Masculino</ion-select-option>
+          <ion-select-option value="f">Femenino</ion-select-option>
+        </ion-select>
+        <span *ngIf="formNewRegister.get('sexo').touched && formNewRegister.get('sexo').hasError('required')">Campo requerido</span>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Ocupación</ion-label>
+        <ion-select formControlName="ocupacion" placeholder="Seleccione uno">
+          <ion-select-option value="estudiante">Estudiante</ion-select-option>
+          <ion-select-option value="maestro">Maestro</ion-select-option>
+          <ion-select-option value="doctor">Doctor</ion-select-option>
+          <ion-select-option value="mago">Mago</ion-select-option>
+        </ion-select>
+        <span *ngIf="formNewRegister.get('ocupacion').touched && formNewRegister.get('ocupacion').hasError('required')">Campo requerido</span>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label>Ciudad</ion-label>
+        <ion-select formControlName="ciudad" placeholder="Seleccione uno">
+          <ion-select-option *ngFor="let city of cities.Chiapas" [value]="city">{{city}}</ion-select-option>
+        </ion-select>
+        <span *ngIf="formNewRegister.get('ocupacion').touched && formNewRegister.get('ocupacion').hasError('required')">Campo requerido</span>
+      </ion-item>
+    
+      <ion-button type="button" (click)="createRegister()" [disabled]="formNewRegister.invalid">Crear registro</ion-button>
+    </form>
+  </ion-card-content>
+</ion-card>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "371858758007",
+    "firebase_url": "https://sincronizador-23017.firebaseio.com",
+    "project_id": "sincronizador-23017",
+    "storage_bucket": "sincronizador-23017.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:371858758007:android:764d2cb7da3280eb",
+        "android_client_info": {
+          "package_name": "io.ionic.starter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "371858758007-nqifqk6v37tcv2pqiq9n5mmgnjpph9pp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByKxMUGs9xk0Ln3f4zbn4N7iBxbwxIe0o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
